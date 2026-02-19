@@ -1,5 +1,6 @@
-from HelperFunctions.BackloggdScraping_Helpers import scrape_backloggd_game_links
+import HelperFunctions.BackloggdScraping_Helpers as backloggd_helpers
 
-dummy_array = scrape_backloggd_game_links("https://backloggd.com/games/lib/popular/")
+backloggd_links = backloggd_helpers.scrape_backloggd_game_links("https://backloggd.com/games/lib/popular/")
 
-print(dummy_array)
+print(backloggd_links[10])
+print(backloggd_helpers.scrape_backloggd_page(backloggd_links[10]))
